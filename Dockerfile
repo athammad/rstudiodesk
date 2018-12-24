@@ -8,9 +8,10 @@ RUN apt-get update && apt-get install -y \
     pandoc \
     pandoc-citeproc \
     libcurl4-gnutls-dev \
-    libcairo2-dev/unstable \
+    libcairo2-dev \
     libxt-dev \
-    libssl-dev \
+    xtail \
+    wget \
     libxml2 \
     libxml2-dev
     
