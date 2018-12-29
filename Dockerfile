@@ -13,8 +13,9 @@ RUN apt-get update && apt-get install -y \
     xtail \
     wget \
     libxml2 \
-    libxml2-dev
-    
+    libxml2-dev \
+    sqlite3 \
+    libsqlite3-dev 
     
 #install all the packages that I need
 RUN R -e "install.packages(c('cronR','RSelenium','sendmailR','xlsx','RSQLite','DBI','RPostgreSQL','rvest','stringr','data.table','crayon','wdman','Rcrawler','shiny','shinyFiles','miniUI'), repos='http://cran.rstudio.com/')"
