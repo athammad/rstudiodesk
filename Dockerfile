@@ -6,7 +6,7 @@ RUN apt-get update -qq && apt-get install -y \
   libssl-dev \
   libcurl4-gnutls-dev \
   libgdal1-dev \ 
-  libproj-dev
+  libproj-dev \
   libpq-dev \
   make \
   zlib1g-dev \
@@ -25,7 +25,7 @@ RUN apt-get update -qq && apt-get install -y \
 
 
 #install all the packages that I need
-RUN R -e "install.packages(c( 'data.table', 'ggplot2', 'jtools','pacman', 'lubridate','plotly', 'reticulate','telegram.bot'), repos='http://cran.us.r-project.org')"
+#RUN R -e "install.packages(c( 'data.table', 'ggplot2', 'jtools','pacman', 'lubridate','plotly', 'reticulate','telegram.bot'), repos='http://cran.us.r-project.org')"
 
 
 #Copy the r script
