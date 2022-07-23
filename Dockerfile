@@ -32,7 +32,7 @@ RUN apt-get update -qq && apt-get install -y \
 #COPY scriptX.R scripX.R
 
 #Copy the main folder
-#COPY FolderX FolderX
+COPY Folder Folder
 
 # when the container starts, start the main.R script
 #ENTRYPOINT ["Rscript", "scriptX.R"]
