@@ -5,8 +5,7 @@ RUN apt-get update -qq && apt-get install -y \
   git \
   libssl-dev \
   libcurl4-gnutls-dev \
-  libgdal1-dev \ 
-  libproj-dev \
+  libgdal-dev \
   libpq-dev \
   make \
   zlib1g-dev \
