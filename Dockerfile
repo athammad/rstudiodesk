@@ -1,21 +1,38 @@
 #start with the rocker/verse
 FROM rocker/rstudio:latest
 
-# Install Ubuntu packages
-RUN apt-get update && apt-get install -y \
-    sudo \
-    gdebi-core \
-    pandoc \
-    pandoc-citeproc \
-    libcurl4-gnutls-dev \
-    libcairo2-dev \
-    libxt-dev \
-    xtail \
-    wget \
-    libxml2 \
-    libxml2-dev \
-    sqlite3 \
-    libsqlite3-dev 
-    
+RUN apt-get update -qq && apt-get install -y \
+  git \
+  libssl-dev \
+  libcurl4-gnutls-dev \
+  libpq-dev \
+  make \
+  zlib1g-dev \
+  r-base \
+  r-base-dev \
+  gdebi-core \
+  pandoc \
+  pandoc-citeproc \
+  libcairo2-dev \
+  libxt-dev \
+  xtail \
+  wget \
+  libxml2 \
+  libxml2-dev \
+  r-cran-caret 
+
+
 #install all the packages that I need
-RUN R -e "install.packages(c('cronR','RSelenium','sendmailR','xlsx','RSQLite','DBI','RPostgreSQL','rvest','stringr','data.table','crayon','wdman','Rcrawler','shiny','shinyFiles','miniUI'), repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages(c( 'data.table', 'ggplot2', 'jtools','pacman', 'lubridate','plotly', 'reticulate','telegram.bot','caret'), repos='http://cran.us.r-project.org')"
+
+
+#Copy the r script
+#COPY scriptX.R scripX.R
+
+#Copy the main folder
+#COPY FolderX FolderX
+
+# when the container starts, start the main.R script
+#ENTRYPOINT ["Rscript", "scriptX.R"]
+#when the container starts, use the interactive mode
+#CMD ["/bin/bash"]
