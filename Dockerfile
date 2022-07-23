@@ -23,7 +23,7 @@ RUN apt-get update -qq && apt-get install -y \
 
 
 #install all the packages that I need
-RUN R -e "install.packages(c( 'data.table', 'ggplot2', 'jtools','pacman', 'lubridate','plotly', 'reticulate','telegram.bot','caret'), repos='http://cran.us.r-project.org')"
+RUN R -e "install.packages(c( 'data.table', 'ggplot2', 'jtools','pacman', 'lubridate','plotly', 'reticulate','telegram.bot'), repos='http://cran.us.r-project.org')"
 
 
 #Copy the r script
