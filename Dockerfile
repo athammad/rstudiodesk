@@ -5,7 +5,7 @@ FROM rocker/rstudio:latest
 #COPY scriptX.R scripX.R
 
 #Copy the main folder
-COPY Folder Folder
+#COPY Folder Folder
 
 # when the container starts, start the main.R script
 #ENTRYPOINT ["Rscript", "scriptX.R"]
